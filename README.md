@@ -1,104 +1,105 @@
 # Kidney WSI segmentation of diagnostic tissue compartments
 
+Minimal steps to train, run inference, and cite this project for renal compartment segmentation on whole slide images.
 
-# Overview
+## Contents
 
-## 3-stage model
+- [Overview](#overview)
+- [Setup](#setup)
+- [Run](#run)
+  - [Training](#training)
+  - [Inference](#inference)
+  - [Evaluation](#evaluation)
+- [Resources](#resources)
+- [Citation](#citation)
+- [Acknowledgement](#acknowledgement)
 
-- Tissue segmentation: tree structure
-- Instance segmentation: mmdet
-- Post-processing step: only in inference stage
+## Overview
 
-## 3 folders
+- Three-stage pipeline: tissue segmentation, instance segmentation with MMDetection, and inference-time post-processing.
+- Key folders: `train` (MMDetection configs and scripts), `inference` (checkpointed models and runners), `eval` (metrics and plots).
 
-- `train`
-- `inference`
-- Produce results
+## Setup
 
-# Setup
-
-Create conda environment:
+1) Create and activate the conda environment
 
 ```sh
 conda create --name milxseg python=3.8.15 -y
 conda activate milxseg
 ```
 
-Install pytorch:
+2) Install PyTorch
 
 ```sh
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
 ```
 
-Install required packages:
+3) Install Python requirements and MMDetection stack
 
 ```sh
 pip install -r requirements.txt
 pip install -U openmim
-mim install mmcv-full==1.5.0 (or mim install mmcv-full==1.7.1)
+mim install mmcv-full==1.5.0   # or: mim install mmcv-full==1.7.1
 mim install mmdet==2.20.0
-mim install mmengine (for installation verification)
+mim install mmengine           # quick install verification
 ```
 
-_Note:_
+> Tips
+> - If `mmcv-full` install fails, try another compatible `cudatoolkit` version.
+> - Error: `AssertionError: MMCV==1.7.1 is used but incompatible. Please install mmcv>=1.3.17, <=1.5.0.`
+>   - Edit `./train/mmdet/__init__.py` and bump `mmcv_maximum_version`, or patch your site-packages copy of `mmdet/__init__.py`.
+> - Error: `ValueError: no valid qupath installation found`
+>   - Install QuPath and export `PAQUO_QUPATH_DIR` as suggested by `paquo get_qupath`.
 
-- When installing `mim install mmcv-full==1.5.0`, you may have an issue with mismatched cuda version. If so, please use or install another `cudatoolkit` version.
+## Run
 
-- When there is a problem like this "AssertionError: MMCV==1.7.1 is used but incompatible. Please install mmcv>=1.3.17, <=1.5.0.
-":
-  - Go to `./train/mmdet/__init__.py`: change the variable `mmcv_maximum_version` to a newer version
-  - or Go to `/data/<user>/miniconda3/envs/milxseg/lib/python3.8/site-packages/mmdet/__init__.py`: change the variable `mmcv_maximum_version` to a newer version
+### Training
 
-- "ValueError: no valid qupath installation found": 
-  - when getting this error, it means the package `paquo` cannot find the QuPath folder on your machine (mostly because QuPath has not been installed).
-  - To solve this problem, read the `Getting QuPath` section in the [Paquo document](https://pypi.org/project/paquo/).
-  - Please make sure to do the export according to the output of the command `paquo get_qupath`, for example: `export PAQUO_QUPATH_DIR=/home/<user>/QuPath/QuPath-0.4.1`.
+If you prefer to skip training, jump to [Inference](#inference).
 
-# Run
-
-## Training
-
-If you prefer to skip training, jump to the [Inference](#inference) section below.
-
-Training segmentation model with the MMDetection Toolbox.
+1) Move into the training workspace
 
 ```sh
 cd ./train
 ```
 
-Create coco json files:
+2) Prepare COCO JSONs
 
 ```sh
 ./scripts/create_tma_json_tissue_detection_and_subtract_smaller_compartments.sh
 ```
 
-Before training, let's look at the [instructions](./docs/train_configs.md) for modifying config files.
+3) Review config guidance at [docs/train_configs.md](./docs/train_configs.md).
 
-Use the distributed training command in the script file `./scripts/train.sh`
+4) Launch distributed training (example)
 
 ```sh
 ./tools/dist_train.sh ./configs/swin/mask_rcnn_swin-t-p4-w7_fpn_1x_coco_HULA_compartment.py 4 --work-dir /data/hqvo3/mmdet/run2
 ```
 
-where
-`4` means we use 4 gpus for distributed training, and
-`--work-dir` to specify where to save our checkpoint files
+Where `4` sets the GPU count and `--work-dir` sets the checkpoint output directory.
 
-If there are some issues with training, please try having a look at [Q&A](./docs/qa.md).
+Troubleshooting: see [docs/qa.md](./docs/qa.md). Reference MMDetection docs for deeper details: https://mmdetection.readthedocs.io/en/latest/.
 
-We suggest looking at the original document of MMDetection for more information [link](https://mmdetection.readthedocs.io/en/latest/).
+### Inference
 
-## Inference
+1) Download checkpoints (link TBD) and place them in `./inference/checkpoints`.
 
-You download the checkpoint files [here](), and put them into `./inference/checkpoints`.
+2) Use the sample command in `inference/scripts/inf.sh` as a template for your data.
 
-Then, have a look at the `inference/scripts/inf.sh` for a sample inference command.
+### Evaluation
 
-## Evaluation
+- Evaluation utilities live in `eval`; more details at [docs/eval.md](./docs/eval.md).
 
-Evaluation codes are in the folder `eval`. More information at [doc](./docs/eval.md).
+## Resources
 
-# Citation
+- Training config how-to: [docs/train_configs.md](./docs/train_configs.md)
+- Troubleshooting Q&A: [docs/qa.md](./docs/qa.md)
+- Evaluation guide: [docs/eval.md](./docs/eval.md)
+
+## Citation
+
+If you use this work, please cite:
 
 ```
 @article{vo2023segmentation,
@@ -109,6 +110,6 @@ Evaluation codes are in the folder `eval`. More information at [doc](./docs/eval
 }
 ```
 
-# Acknowledgement
+## Acknowledgement
 
 [MMDetection Toolbox](https://github.com/open-mmlab/mmdetection)
