@@ -1,6 +1,6 @@
 # Kidney WSI segmentation of diagnostic tissue compartments
 
-Minimal steps to train, run inference, and cite this project for renal compartment segmentation on whole slide images.
+Minimal steps to train, run inference for renal compartment segmentation on whole slide images.
 
 ## Contents
 
