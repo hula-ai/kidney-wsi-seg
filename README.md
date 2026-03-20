@@ -83,7 +83,7 @@ Troubleshooting: see [docs/qa.md](./docs/qa.md). Reference MMDetection docs for 
 
 ### Inference
 
-1) Download checkpoints (link TBD) and place them in `./inference/checkpoints`.
+1) Download checkpoints from this [🤗 link](https://huggingface.co/HuyVoHF304/kidney-wsi-seg/tree/main) and place them in `./inference/checkpoints`.
 
 2) Use the sample command in `inference/scripts/inf.sh` as a template for your data.
 
