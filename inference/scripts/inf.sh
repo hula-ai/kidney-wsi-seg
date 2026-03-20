@@ -1,0 +1,18 @@
+python ./new/tmp_generate_wsi_prediction_masks.py \
+--sub_df_id 0 \
+--quproj 'AMR' \
+--cuda_tiseg 4 \
+--cuda_compseg 4 \
+--from_index 0 \
+--to_index 600 \
+--output_dir '/data/public/HULA/AMR/pred_crops_swin/' \
+--wsi_path '/data/public/HULA/AMR/wsi/' \
+--csv_path './csv/' \
+--do_not_print_much \
+--edge_detector 'laplacian' \
+--n_cml_patches 200 \
+--n_mp_cml_eps 20 \
+--n_mp_processes -1 \
+--n_gpus 4 \
+--gpu_batch_size 27 \
+--continue_from_previous_run

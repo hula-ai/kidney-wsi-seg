@@ -1,0 +1,80 @@
+Center,Biopsy Number,Case Label,Glomerulus Annotations,Arteriole Annotations,Artery Annotations,Tubule Annotations,Cortex Annotations,Medulla Annotations,Capsule Annotations,EM Glomerulus Annotations,EM TI Annotations,WSI Tiles,Ignore Annotations,None Annotations
+Cologne,C 15.2819,Mimicker,219,155,12,0,12,0,19,0,0,1645,0,1
+Cologne,C 16.10246,Mimicker,258,346,58,0,21,19,11,0,0,3035,1,1
+Cologne,C 16.17333,Mimicker,64,127,27,0,16,0,6,0,0,0,0,0
+Cologne,C 19.14570,Mimicker,133,143,31,0,0,0,0,0,0,1581,1,0
+Cologne,C 19.1807,Mimicker,31,31,5,0,5,2,4,0,0,0,1,0
+Cologne,C 19.23652,Mimicker,55,202,7,0,20,5,30,0,0,1061,0,0
+Cologne,C 19.23900,Mimicker,124,119,22,0,18,0,16,0,0,1634,0,0
+Cologne,C 19.30924,Mimicker,112,281,34,0,36,1,7,0,0,3509,1,0
+Cologne,C 19.31699,Mimicker,42,138,24,0,19,0,20,0,0,1264,0,0
+Cologne,C 19.33186,Mimicker,116,93,19,0,11,0,5,0,0,1154,0,0
+Cologne,C 19.33938,Mimicker,148,225,25,0,23,12,24,0,0,2557,0,2
+Cologne,C 19.39362,Mimicker,208,116,33,0,33,21,44,0,0,3180,0,1
+Cologne,C 19.39630,Mimicker,70,135,5,0,10,9,7,0,0,1500,1,0
+Cologne,C 19.41187,Mimicker,83,228,15,0,28,0,9,0,0,2854,0,1
+Cologne,C 19.42386,Mimicker,111,180,41,0,62,32,10,0,0,2920,2,2
+Cologne,C 19.51648,Mimicker,79,115,30,0,12,6,6,0,0,1130,0,0
+Cologne,C 19.54509,Mimicker,107,139,27,0,26,0,9,0,0,1361,1,0
+Cologne,C 20.18953,Mimicker,52,140,0,0,11,11,5,0,0,824,0,0
+Cologne,C 20.27338,Mimicker,250,211,38,0,15,0,5,0,0,2878,0,3
+Cologne,C 20.35259,Mimicker,126,133,14,0,34,21,25,0,0,3296,0,0
+Cologne,C 20.35684,Mimicker,99,161,41,0,39,25,0,0,0,1983,0,0
+Cologne,C 20.36604,Mimicker,296,479,51,0,36,10,22,0,0,3486,0,0
+Cologne,C 20.39962,Mimicker,146,147,37,0,45,5,32,0,0,2073,0,3
+Cologne,C 21.1547,Mimicker,69,85,22,0,8,0,4,0,0,933,1,0
+Cologne,C 21.16323,Mimicker,25,28,5,0,4,0,8,0,0,421,0,0
+Cologne,C 21.17231,Mimicker,229,298,67,0,10,5,11,0,0,0,0,0
+Cologne,C 21.4974,Mimicker,100,227,39,0,11,4,5,0,0,0,0,0
+Cologne,NC 19.39,Mimicker,273,336,60,0,14,3,3,0,0,5524,0,0
+Cologne,NC 19.40,Mimicker,72,102,10,0,18,0,23,0,0,1377,0,1
+Turin,Turin-Mimicker-1,Mimicker,114,90,24,0,5,0,3,0,0,0,0,0
+Turin,Turin-Mimicker-2,Mimicker,84,117,15,0,12,13,9,0,0,0,0,0
+Turin,Turin-Mimicker-3,Mimicker,81,138,17,0,17,8,8,0,0,0,0,0
+Turin,Turin-Mimicker-4,Mimicker,53,139,41,0,17,14,4,0,0,0,0,0
+Turin,Turin-Mimicker-5,Mimicker,149,299,30,0,12,10,9,0,0,0,0,0
+WeillCornell,WCM_TMA_11,Mimicker,103,54,30,0,22,0,16,0,0,0,0,0
+WeillCornell,WCM_TMA_12,Mimicker,122,654,105,0,26,8,10,0,0,0,0,1
+WeillCornell,WCM_TMA_13,Mimicker,193,238,36,0,22,0,14,0,0,0,0,0
+WeillCornell,WCM_TMA_14,Mimicker,135,84,8,0,8,8,7,0,0,0,0,4
+WeillCornell,WCM_TMA_15,Mimicker,234,136,48,0,16,12,8,0,0,0,0,0
+WeillCornell,WCM_TMA_16,Mimicker,190,393,55,0,32,1,14,0,0,0,0,0
+Cologne,C 14.30754,TMA,182,223,28,0,14,7,6,0,0,3152,1,0
+Cologne,C 14.36277,TMA,148,437,50,0,29,10,5,0,0,2850,3,0
+Cologne,C 14.39514,TMA,183,250,20,0,10,0,9,0,0,2663,0,0
+Cologne,C 15.1298,TMA,354,252,44,0,25,11,11,0,0,3306,0,0
+Cologne,C 15.5398,TMA,62,48,14,0,14,3,10,0,0,873,0,0
+Cologne,C 17.40845,TMA,60,484,80,0,20,10,11,0,0,0,0,0
+Cologne,C 17.44128,TMA,204,114,9,0,20,0,11,0,0,1488,1,0
+Cologne,C 18.27764,TMA,444,485,102,0,48,24,22,0,0,7006,15,0
+Cologne,C 18.28682,TMA,537,649,107,0,42,10,22,0,0,6058,12,1
+Cologne,C 20.1080,TMA,106,117,19,0,31,0,42,0,0,1992,0,0
+Cologne,C 20.13217,TMA,56,54,13,0,11,10,9,0,0,893,1,0
+Cologne,C 20.13498,TMA,85,184,10,0,16,11,0,0,0,1133,0,0
+Cologne,C 20.14496,TMA,450,175,31,0,29,0,31,0,0,3927,0,0
+Cologne,C 20.17130,TMA,43,90,5,0,10,10,10,0,0,598,1,0
+Cologne,C 20.17926,TMA,86,111,24,0,10,13,1,0,0,859,2,0
+Cologne,C 20.2761,TMA,77,52,14,0,21,10,20,0,0,204,0,0
+Cologne,C 20.38943,TMA,208,867,94,0,63,11,20,0,0,3511,2,0
+Cologne,C 20.38945,TMA,133,225,34,0,21,11,11,0,0,1975,0,0
+Cologne,C 20.41503,TMA,267,392,80,0,34,2,18,0,0,2098,2,1
+Cologne,C 21.13018,TMA,34,60,5,0,10,0,10,0,0,695,0,0
+Cologne,C 21.14890,TMA,51,86,12,0,21,11,0,0,0,1042,0,0
+Cologne,C 21.30289,TMA,63,167,6,0,12,12,7,0,0,975,0,4
+Cologne,C 21.7505,TMA,51,96,34,0,22,8,9,0,0,681,0,1
+Cologne,NC 16.15,TMA,113,98,24,0,26,11,31,0,0,1763,2,0
+Turin,Turin-TMA-1,TMA,43,141,6,0,9,12,5,0,0,0,1,0
+Turin,Turin-TMA-2,TMA,119,228,30,0,12,8,8,0,0,0,0,3
+Turin,Turin-TMA-3,TMA,138,160,42,0,8,6,5,0,0,0,0,0
+Turin,Turin-TMA-4,TMA,82,59,20,0,14,4,8,0,0,0,4,0
+Turin,Turin-TMA-5,TMA,135,94,24,0,7,7,3,0,0,0,3,0
+WeillCornell,WCM_TMA_1,TMA,233,259,47,0,20,0,12,0,0,0,0,3
+WeillCornell,WCM_TMA_10,TMA,86,90,63,0,5,0,7,0,0,0,0,0
+WeillCornell,WCM_TMA_2,TMA,95,187,14,0,14,8,4,0,0,1456,3,0
+WeillCornell,WCM_TMA_3,TMA,94,78,15,0,12,0,12,0,0,1197,1,0
+WeillCornell,WCM_TMA_4,TMA,83,100,23,0,8,1,0,0,0,947,0,0
+WeillCornell,WCM_TMA_5,TMA,381,364,33,0,16,5,6,0,0,3837,0,0
+WeillCornell,WCM_TMA_6,TMA,52,140,21,0,8,9,4,0,0,0,0,0
+WeillCornell,WCM_TMA_7,TMA,51,38,6,0,11,5,4,0,0,0,0,2
+WeillCornell,WCM_TMA_8,TMA,85,224,12,0,16,0,15,0,0,0,0,0
+WeillCornell,WCM_TMA_9,TMA,63,60,16,0,23,2,23,0,0,0,0,0

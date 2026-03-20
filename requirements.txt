@@ -1,0 +1,18 @@
+torch==1.12.1
+torchvision==0.13.1
+torchaudio==0.12.1
+chardet==5.1.0
+tifffile==2022.10.10
+seaborn==0.12.2
+h5py==3.7.0
+scikit-learn==1.2.0
+kneed==0.8.1
+scikit-image==0.19.3
+slideio==2.0.0
+aicsimageio==4.9.4
+openslide-python==1.2.0
+wandb==0.13.7
+tqdm==4.64.1
+paquo==0.6.0
+# textable==1.6.7
+# latextable==1.0.0
